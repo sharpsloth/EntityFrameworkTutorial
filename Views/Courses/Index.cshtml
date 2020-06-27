@@ -4,51 +4,60 @@
     ViewData["Title"] = "Courses";
 }
 
-<h2>Courses</h2>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CourseID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Credits)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Department)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CourseID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Credits)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Department.Name)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.CourseID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.CourseID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.CourseID">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<section class="page-section about-heading">
+    <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/course.jpg" alt="">
+        <div class="about-heading-content">
+            <div class="row" id="scroll">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">search, edit, delete</span>
+                            <span class="section-heading-lower">Courses</span>
+                        </h2>
+                        <p>
+                            <a asp-action="Create">Create New</a>
+                        </p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.CourseID)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Title)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Credits)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Department)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.CourseID)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Title)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Credits)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Department.Name)
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@item.CourseID">Edit</a> |
+                                            <a asp-action="Details" asp-route-id="@item.CourseID">Details</a> |
+                                            <a asp-action="Delete" asp-route-id="@item.CourseID">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table></div></div></div></div></div></section>

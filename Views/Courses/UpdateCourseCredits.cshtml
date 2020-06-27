@@ -2,27 +2,36 @@
     ViewBag.Title = "UpdateCourseCredits";
 }
 
-<h2>Update Course Credits</h2>
-
-@if (ViewData["RowsAffected"] == null)
-{
-    <form asp-action="UpdateCourseCredits">
-        <div class="form-actions no-color">
-            <p>
-                Enter a number to multiply every course's credits by: @Html.TextBox("multiplier")
-            </p>
-            <p>
-                <input type="submit" value="Update" class="btn btn-default" />
-            </p>
-        </div>
-    </form>
-}
-@if (ViewData["RowsAffected"] != null)
-{
-    <p>
-        Number of rows updated: @ViewData["RowsAffected"]
-    </p>
-}
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+<section class="page-section cta">
+    <div class="container" id="scroll">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <h2 class="section-heading mb-5">
+                        <span class="section-heading-upper">update</span>
+                        <span class="section-heading-lower">Course Credits</span>
+                    </h2>
+                    <dl class="row">
+                        @if (ViewData["RowsAffected"] == null)
+                        {
+                            <form asp-action="UpdateCourseCredits">
+                                <div class="form-actions no-color">
+                                    <p>
+                                        Enter a number to multiply every course's credits by: @Html.TextBox("multiplier")
+                                    </p>
+                                    <p>
+                                        <input type="submit" value="Update" class="btn btn-default" />
+                                    </p>
+                                </div>
+                            </form>
+                        }
+                        @if (ViewData["RowsAffected"] != null)
+                        {
+                            <p>
+                                Number of rows updated: @ViewData["RowsAffected"]
+                            </p>
+                        }
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                        </div></div></div></div></section>

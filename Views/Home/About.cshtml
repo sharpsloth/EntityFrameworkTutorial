@@ -3,35 +3,39 @@
 @{
     ViewData["Title"] = "Student Body Statistics";
 }
-
-<h2>Student Body Statistics</h2>
-
-<table class="table">
-    <tr class="table-dark">
-        <th>
-            Enrollment Date
-        </th>
-        <th>
-            Students
-        </th>
-    </tr>
-
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EnrollmentDate)
-            </td>
-            <td>
-                @item.StudentCount
-            </td>
-        </tr>
-    }
-</table>
-<div class="container card">
-    <h5> For questions about the website please contact:</h5>
-    <div class="card-body">
-        <p>Clarisse Mendenhall</p>
-        <p>clarissemendenhall@gmail.com</p>
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <h2 class="section-heading mb-5">
+                        <span class="section-heading-upper">Statistics</span>
+                        <span class="section-heading-lower">Our Student Body</span>
+                    </h2>
+                    <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+                        <li class="list-unstyled-item list-hours-item d-flex">
+                            Enrollment Date
+                            <span class="ml-auto">Students</span>
+                        </li>
+                        @foreach (var item in Model)
+                        {
+                            <li class="list-unstyled-item list-hours-item d-flex">
+                                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+                                <span class="ml-auto">@item.StudentCount</span>
+                            </li>
+                        }
+                        </ul>
+                    <p class="address mb-5">
+                        <em>
+                            <strong>Webmaster</strong>
+                            <br>
+                            Clarisse Mendenhall
+                            <br />
+                            clarissemendenhall@gmail.com
+                        </em>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
