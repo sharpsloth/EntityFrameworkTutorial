@@ -4,43 +4,48 @@
     ViewData["Title"] = "Details";
 }
 
-    <section class="page-section cta">
-        <div class="container" id="scroll">
-            <div class="row">
-                <div class="col-xl-9 mx-auto">
-                    <div class="cta-inner text-center rounded">
-                        <h2 class="section-heading mb-5">
-                            <span class="section-heading-upper">Details</span>
-                            <span class="section-heading-lower">Department</span>
-                        </h2>
-                        <dl class="row">
-                            <dt class="col-sm-6">
-                                @Html.DisplayNameFor(model => model.Name)
-                            </dt>
-                            <dd class="col-sm-6">
-                                @Html.DisplayFor(model => model.Name)
-                            </dd>
-                            <dt class="col-sm-6">
-                                @Html.DisplayNameFor(model => model.Budget)
-                            </dt>
-                            <dd class="col-sm-6">
-                                @Html.DisplayFor(model => model.Budget)
-                            </dd>
-                            <dt class="col-sm-6">
-                                @Html.DisplayNameFor(model => model.StartDate)
-                            </dt>
-                            <dd class="col-sm-6">
-                                @Html.DisplayFor(model => model.StartDate)
-                            </dd>
-                            <dt class="col-sm-6">
-                                @Html.DisplayNameFor(model => model.Administrator)
-                            </dt>
-                            <dd class="col-sm-6">
-                                @Html.DisplayFor(model => model.Administrator.FullName)
-                            </dd>
-                        </dl>
-                    </div>
+<section class="page-section cta">
+    <div class="container" id="scroll">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <h2 class="section-heading mb-5">
+                        <span class="section-heading-upper">Details</span>
+                        <span class="section-heading-lower">Department</span>
+                    </h2>
+                    <dl class="row">
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Budget)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Budget)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.StartDate)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.StartDate)
+                        </dd>
+                        <dt class="col-sm-6">
+                            @Html.DisplayNameFor(model => model.Administrator)
+                        </dt>
+                        <dd class="col-sm-6">
+                            @Html.DisplayFor(model => model.Administrator.FullName)
+                        </dd>
+                    </dl>
+
                     <div>
                         <a asp-action="Edit" asp-route-id="@Model.DepartmentID">Edit</a> |
                         <a asp-action="Index">Back to List</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

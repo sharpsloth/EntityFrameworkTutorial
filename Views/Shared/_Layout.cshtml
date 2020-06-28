@@ -45,19 +45,19 @@
                         </a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Home" asp-action="About" asp-fragment="scroll">About</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Students" asp-action="Index">Students</a>
+                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Students" asp-action="Index" asp-fragment="scroll">Students</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Courses" asp-action="Index">Courses</a>
+                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Courses" asp-action="Index" asp-fragment="scroll">Courses</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Instructors" asp-action="Index">Instructors</a>
+                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Instructors" asp-action="Index" asp-fragment="scroll">Instructors</a>
                     </li>
                     <li class="nav-item px-lg-4">
-                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Departments" asp-action="Index">Departments</a>
+                        <a class="nav-link text-uppercase text-expanded" asp-area="" asp-controller="Departments" asp-action="Index" asp-fragment="scroll">Departments</a>
                     </li>
                 </ul>
             </div>
@@ -94,16 +94,6 @@
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-            // Handler for .ready() called.
-            $('html, body').animate({
-                scrollTop: $('#scroll').offset().top
-            }, 'slow');
-        });
-
-    </script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
